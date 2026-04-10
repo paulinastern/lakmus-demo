@@ -25,6 +25,18 @@ Use it for demos, blog posts, interviews, or as a starting point for your own an
 | [`src/agent_behavior_control/`](src/agent_behavior_control/) | `TrialRecord`, `control_score`, summarize + HTML |
 | [`examples/sample_trial_records.jsonl`](examples/sample_trial_records.jsonl) | Fully synthetic data |
 
+## Arena / OfficeQA (leaderboard snapshot)
+
+This workflow was battle-tested on **OfficeQA**: long-horizon **document QA** over the **U.S. Treasury Bulletin** text corpus. The task set is the one popularized in **Databricks**-adjacent Office QA materials and run operationally on the **Sentient Arena** platform (Cohort 0).
+
+| Metric | Value | Notes |
+|--------|------:|--------|
+| **Composite score** | **157** | Arena leaderboard-style aggregate (exact formula depends on host weighting) |
+| **Accuracy** | **~64%** | Share of tasks marked correct on the full server run |
+| **Avg time / task** | **~3.1 min** | Mean wall-clock agent time per task on that submission |
+
+Leaderboard numbers move with **reruns**, **infra fixes**, and rule tweaks; treat this row as a **single snapshot**, not a guarantee of reproducibility on a future rerun.
+
 ## Local results (one real tuning window)
 
 Numbers below come from a **single export** of the internal dashboard (hundreds of trials on a document-QA agent). They are **not** the public minimal HTML in this repo; they illustrate what you can build once you emit `TrialRecord` JSONL from your harness.
