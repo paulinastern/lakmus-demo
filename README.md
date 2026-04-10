@@ -85,11 +85,6 @@ Each row is one **harness run** (e.g. a `--all` or batch). Compare pass rate, an
 
 **Recommendation**: structured “one change” hint. **Patch history**: dry-runs vs applied edits. **Decision flow**: priority-ordered controls. **Thinking signals**: aggregated uncertainty / pivot language to suggest stricter rules.
 
-### Images in GitHub READMEs
-
-- There is **no separate “image upload” API** for READMEs: you **commit image files** in the repo (e.g. under `docs/images/`) and link them with `![alt](docs/images/file.png)`.
-- **Practical limits**: very large PNGs slow the page. Stay roughly **under ~1–2 MB per image** when possible (these four are ~40–100 KB each). GitHub blocks files **≥ 100 MB**; repos should stay well below **~1 GB** total for a smooth experience.
-
 ## What is *not* included (by design)
 
 - No vendor-specific harness code, corpus paths, or private “auto-patch” runners  
