@@ -1,6 +1,8 @@
 # Agent behavior control (demo kit)
 
-**Turn agent benchmark runs into structured metrics, failure labels, and a tiny HTML report** — without standing up a server.
+**Lakmus** — showcase of **agent behavior control** on a **real benchmark** (OfficeQA / Arena): traces → metrics → regressions → targeted fixes.
+
+Turn agent benchmark runs into **structured metrics**, **failure labels**, and a **tiny HTML report** — without standing up a server.
 
 This repository exists to document an **evaluation loop** that worked well in practice: parse traces → classify failures → watch regressions → change one thing → rerun. It is intentionally **small and generic** so you can share the *ideas* and a **reference schema** publicly, while keeping a larger proprietary integration private.
 
