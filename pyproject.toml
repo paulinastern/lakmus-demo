@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-behavior-control"
+version = "0.1.0"
+description = "Document and prototype metrics for agentic benchmark behavior control loops"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Paulina Stern" }]
+
+[project.scripts]
+abc-demo = "agent_behavior_control.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
