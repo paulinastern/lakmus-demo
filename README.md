@@ -35,8 +35,11 @@ This workflow was battle-tested on **OfficeQA**: long-horizon **document QA** ov
 | **Accuracy** | **~64%** | Share of tasks marked correct on the full server run |
 | **Avg time / task** | **~3.1 min** | Mean wall-clock agent time per task on that submission |
 
-Leaderboard numbers move with **reruns**, **infra fixes**, and rule tweaks; treat this row as a **single snapshot**, not a guarantee of reproducibility on a future rerun.
+**Do not treat this table as a final verdict.** During Cohort 0, Arena’s **cloud side had reliability issues**; the organizers **reran many submissions on different hardware** (e.g. local machines and GPUs) to recover results. That means **latency and especially cost are not strictly comparable** to your own local OpenRouter runs, and late-stage leaderboard numbers could shift again after infra fixes. The snapshot is still useful as **context**, not as a sealed benchmark outcome.
 
+What *did* stay meaningful through the noise was **behavior control**: classifying failures, separating infra from model errors, and watching **control-style metrics** and regressions while the platform was unstable. That is what this repo is optimized for.
+
+**Where this goes next:** I'll keep iterating the same loop on the full task set to close the gap toward **85%+** (and beyond) under stable infra. 
 ## Local results (one real tuning window)
 
 Numbers below come from a **single export** of the internal dashboard (hundreds of trials on a document-QA agent). They are **not** the public minimal HTML in this repo; they illustrate what you can build once you emit `TrialRecord` JSONL from your harness.
